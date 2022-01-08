@@ -15,3 +15,11 @@
 
 $router->post('/registration','RegistrationController@OnRegister');
 
+$router->post('/login','LoginController@OnLogin');
+
+// $router->post('/tokenTest',['middleware'=>'auth','uses'=>'LoginController@TokenTest']);
+$router->post('/insert',['middleware'=>'auth','uses'=>'PhoneBookController@OnInsert']);
+$router->post('/select',['middleware'=>'auth','uses'=>'PhoneBookController@OnSelect']);
+$router->post('/delete',['middleware'=>'auth','uses'=>'PhoneBookController@OnDelete']);
+
+
